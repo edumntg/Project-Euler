@@ -1,0 +1,21 @@
+clc, clear all, close all
+
+%% Problem 3
+
+% Go from bigger to smaller
+N = 600851475143;
+largest = 1;
+primes = [];
+while N ~= 1
+    
+end
+
+function ret = isPrime(n)
+    ret = 1;
+    for i = 1:n
+        if mod(n, i) == 0 && i ~= 1 && i ~= n
+            ret = 0;
+            break;
+        end
+    end
+end
