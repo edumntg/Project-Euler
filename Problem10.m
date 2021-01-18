@@ -1,16 +1,17 @@
 clc, clear all, close all
 
-%% problem 7
+%% Problem 10
 
-n = 1;
-i = 1;
-while n < 10001
-    i = i + 2;
-    if isPrime(i) == 1
-        n = n + 1;
+ub = 2e6;
+
+sum = 0;
+for n = 1:2:ub
+    if isPrime(n) && n < ub
+        sum = sum + n;
     end
 end
-i = i - 2
+sum
+
 function ret = isPrime(n)
     ret = 1;
     if n <= 1
